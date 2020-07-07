@@ -25,7 +25,7 @@ import {
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnDestroy {
-  title = "rxjs-example1";
+  title = "RxJS Example 1";
   results: string[] = [];
   showImage = false;
 
@@ -33,7 +33,7 @@ export class AppComponent implements OnDestroy {
   stopBuffer: Subject<any> = new Subject();
   stopScan: Subject<any> = new Subject();
 
-  sub: Subscription;
+  sub = new Subscription();
 
   ngOnDestroy() {
     this.sub.unsubscribe();
