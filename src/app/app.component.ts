@@ -1,23 +1,6 @@
 import { Component, OnDestroy } from "@angular/core";
-import {
-  interval,
-  race,
-  combineLatest,
-  Subscription,
-  Subject,
-  timer,
-  merge,
-  of
-} from "rxjs";
-import {
-  map,
-  buffer,
-  takeUntil,
-  scan,
-  tap,
-  distinctUntilChanged,
-  every
-} from "rxjs/operators";
+import { interval, race, combineLatest, Subscription, Subject, timer, merge, of } from "rxjs";
+import { map, buffer, takeUntil, scan, tap, distinctUntilChanged, every } from "rxjs/operators";
 
 @Component({
   selector: "app-root",
