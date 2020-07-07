@@ -1,0 +1,39 @@
+<div class="content">
+  <h3>{{title}}</h3>
+  <button (click)="clear()">CLEAR!</button>
+  <button (click)="finish()">FINISH!</button>
+
+  <div>
+    <button (click)="dumbTest()">DUMB</button>
+  </div>
+
+  <div>
+    <button (click)="testScan()">SCAN</button>
+    <button (click)="stopScan.next()">STOP SCAN</button>
+  </div>
+
+  <div>
+    <button (click)="testBuffer()">START BUFFER</button>
+    <button (click)="releaseBuffer.next()">RELEASE BUFFER!</button>
+    <button (click)="stopBuffer.next()">STOP BUFFER!</button>
+  </div>
+
+  <div>
+    <button (click)="testRace()">RACE!</button>
+    <button (click)="testCombineLatest()">COMBINE!</button>
+    <button (click)="testMerge()">MERGE!</button>
+  </div>
+  <ul>
+    <li *ngFor="let result of results">{{result}}</li>
+  </ul>
+</div>
+<div *ngIf="showImage">
+  <iframe src="https://giphy.com/embed/cbb8zL5wbNnfq" 
+          width="480" 
+          height="480" 
+          frameBorder="0" 
+          class="giphy-embed" 
+          allowFullScreen>
+  </iframe>
+  <p>THANKS FOR WATCHING!!</p>
+</div>
